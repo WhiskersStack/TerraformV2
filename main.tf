@@ -15,3 +15,6 @@ module "rds" {
   db_password             = var.db_password
   vpc_security_group_ids  = [module.db_security_group.db_security_group_id]
 }
+output "notice" {
+  value = "Endpoint: ${module.rds.rds_endpoint}"
+}
